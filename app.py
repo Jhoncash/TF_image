@@ -2,7 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 import cv2
-from PIL import Image
+from PIL import Image
 
 modelo = tf.keras.models.load_model("clasificacion-perros-gatos-CNNAD.h5")
 
