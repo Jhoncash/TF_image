@@ -36,10 +36,10 @@ def predecir(imagen):
     # Suponiendo que la salida es una probabilidad entre 0 y 1 (0 = gato, 1 = perro)
     clase = "Perro " if prediccion[0][0] > 0.5 else "Gato "
     confianza = prediccion[0][0] if prediccion[0][0] > 0.5 else 1 - prediccion[0][0]
-    return clase, confianza
+    return clase, confianza
 
 # Opción 1: Subir imagen
-imagen_subida = st.file_uploader("Sube una imagen", type=["jpg", "png", "jpeg"])
+imagen_subida = st.file_uploader("Sube una imagen", type=["jpg", "png", "jpeg"])
                                                           
 if imagen_subida:
     imagen = Image.open(imagen_subida)
